@@ -1,4 +1,4 @@
-/* Abre e fecha o menu quando clicar no icone */
+/* Opens and closes the menu when clicking on the icon */
 const nav = document.querySelector("#header nav");
 const toggle = document.querySelectorAll("nav .toggle");
 
@@ -8,7 +8,7 @@ for (const element of toggle) {
   });
 }
 
-/* Quando clicar em um item do menu, esconder o menu */
+/* When clicking on a menu item, hide the menu */
 const links = document.querySelectorAll("nav ul li a");
 
 for (const link of links) {
@@ -17,16 +17,16 @@ for (const link of links) {
   });
 }
 
-/* mudar o header quando o scroll for usado */
+/* Change header when scroll is used */
 const header = document.querySelector("#header");
 const navHeight = header.offsetHeight;
 
 function changeHeaderWhenScroll() {
   if (window.scrollY >= navHeight) {
-    //scroll é maior que a altura do height
+    // scroll is greater than height
     header.classList.add("scroll");
   } else {
-    //scroll é menor que a altura do height
+    // scroll is less than height
     header.classList.remove("scroll");
   }
 }
@@ -47,7 +47,7 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-/* ScrollReveal: Mostrar elementos quando der scroll na pagina */
+/* ScrollReveal: Show elements when scrolling */
 const scrollReveal = ScrollReveal({
   origin: "top",
   distance: "30px",
@@ -66,7 +66,7 @@ scrollReveal.reveal(
   { interval: 100 }
 );
 
-/* Botão voltar para o topo */
+/* Back to top button */
 const backToTopButton = document.querySelector(".back-to-top");
 
 function backToTop() {
@@ -77,7 +77,7 @@ function backToTop() {
   }
 }
 
-/* Menu ativo conforme a sessão visível na página */
+/* Active menu as per the session visible on the page */
 const sections = document.querySelectorAll("main section[id]");
 function activateMenuAtCurrentSection() {
   const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 4;
@@ -109,6 +109,7 @@ window.addEventListener("scroll", function () {
   activateMenuAtCurrentSection();
 });
 
+/* Form validation */
 function validateForm() {
   let email = document.getElementById("email").value;
   let subject = document.getElementById("subject").value;
@@ -130,6 +131,6 @@ function validateForm() {
   } else if (subject == "" && userVerified && domainVerified) {
     alert("Erro no envio: Insira uma mensagem");
   } else {
-    alert("Erro no envio: Endereço de mail inválido");
+    alert("Erro no envio: Endereço de email inválido");
   }
 }
