@@ -183,7 +183,7 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li a.active {
-  color: var(--base-color-alt);
+  color: var(--base-color-second);
 }
 
 nav ul li a::after {
@@ -219,7 +219,6 @@ nav .menu ul {
 nav.show .menu {
   opacity: 1;
   visibility: visible;
-
   background: var(--title-color);
 
   height: 100vh;
@@ -242,12 +241,13 @@ nav.show ul.grid {
 }
 
 .toggle {
-  color: var(--base-color);
+  color: var(--base-color-second);
   font-size: 1.5rem;
   cursor: pointer;
   position: absolute;
   top: 0;
   right: 0;
+  padding: 0.5rem;
 }
 
 nav .icon-cancel {
