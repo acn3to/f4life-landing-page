@@ -1,54 +1,343 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt_BR">
   <head>
+    <!-- Page Info -->
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>F4Life - Moradias Universitárias</title>
+    <link rel="icon" type="image/x-icon" href="./assets/photos/favicon.ico?" />
 
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="reset.css" />
-
-    <!--Icons-->
+    <!-- Icons -->
     <link rel="stylesheet" href="assets/fonts/style.css" />
-  </head>
 
+    <!-- Lottie -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <!-- AnimateJs -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
   <body>
     <header id="header">
       <nav class="container">
-        <img src="./assets/f4life.png" alt="Logomarca da empresa" />
+        <a class="logo" href="#"
+          ><img src="./assets/photos/logo.png" alt="Logomarca da empresa"
+        /></a>
 
+        <!-- Menu -->
         <div class="menu">
           <ul class="grid">
-            <li><a class="title" href="#home">Inicio</a></li>
-            <li><a class="title" href="#about">Quem somos</a></li>
-            <li><a class="title" href="#apartments">Nossos apartamentos</a></li>
-            <li><a class="title" href="#contact">Fale conosco</a></li>
+            <li><a class="title-menu" href="#home">Inicio</a></li>
+            <li><a class="title-menu" href="#about">Quem somos</a></li>
+            <li>
+              <a class="title-menu" href="#apartments">Nossos apartamentos</a>
+            </li>
+            <li><a class="title-menu" href="#service">Serviços</a></li>
+            <li><a class="title-menu" href="#testimonials">Depoimentos</a></li>
+            <li><a class="title-menu" href="#contact">Fale conosco</a></li>
           </ul>
         </div>
-
-        <div class="toggle icon-menu"></div>
-        <div class="toggle icon-close"></div>
+        <!-- /Menu -->
+        <div class="toggle icon-th-menu"></div>
+        <div class="toggle icon-cancel"></div>
       </nav>
     </header>
     <main>
-      <section class="section" id="home"></section>
+      <!-- Home -->
+      <section class="section" id="home">
+        <div class="container grid">
+          <div class="image">
+            <img src="./assets/photos/blue-sofa.jpg" alt="Foto de um sofá" />
+          </div>
+          <div class="text">
+            <h2 class="title">Econtre um local moderno e acessível</h2>
+
+            <div id="home-animation-text">
+              <!-- Lottie Player -->
+              <lottie-player
+                class="lottie"
+                src="https://assets6.lottiefiles.com/packages/lf20_qievcjy1.json"
+                background="transparent"
+                speed="1"
+                loop
+                autoplay
+              ></lottie-player>
+              <!-- /Lottie Player -->
+              <p>
+                A F4Life conta com um catálogo completo de moradias
+                compartilhadas, apartamentos e kitinetes. Feito de universtário
+                para universtário.
+              </p>
+            </div>
+            <a class="button" href="#contact">Fale conosco</a>
+          </div>
+        </div>
+      </section>
 
       <div class="divider-1"></div>
 
-      <section class="section" id="about"></section>
+      <!-- About -->
+      <section class="section" id="about">
+        <div class="container grid">
+          <div class="image">
+            <img src="./assets/photos/about.jpg" alt="Imagem 2" />
+          </div>
+          <div class="text">
+            <h2 class="title">Sobre nós</h2>
+            <p>
+              F4Life é uma empresa de aluguéis de repúblicas para pessoas
+              universitárias. Similar aos modelos de Quinto Andar e Loft, a
+              empresa realiza reformas e prepara moradias para recepção de
+              pessoas universitárias em um ambiente específico e otimizado para
+              a vida de graduação.
+            </p>
+          </div>
+        </div>
+      </section>
 
       <div class="divider-2"></div>
 
-      <section class="section" id="apartments"></section>
+      <!-- Apartments -->
+      <section class="section" id="apartments">
+        <div class="container">
+          <h2 class="title">Alguns dos nossos apartamentos</h2>
+          <div class="apartments swiper">
+            <div class="swiper-wrapper">
+              <!-- Swiper 1 -->
+              <div class="apartments swiper-slide">
+                <p>
+                  Modalidade: Apartamento completo <br />
+                  Bairro: Pituba
+                </p>
+                <br />
+                <img src="./assets/photos/dark-blue-ap.jpg" alt="" />
+              </div>
+              <!-- Swiper 2 -->
+              <div class="apartments swiper-slide">
+                <p>
+                  Modalidade: Moradia compartilhada <br />
+                  Bairro: Costa Azul
+                </p>
+                <br />
+                <img src="./assets/photos/student.jpg" alt="" />
+              </div>
+              <!-- Swiper 3 -->
+              <div class="apartments swiper-slide">
+                <p>
+                  Modalidade: Kitnet <br />
+                  Bairro: Brotas
+                </p>
+                <br />
+                <img src="./assets/photos/blue-kitnet.jpg" alt="" />
+              </div>
+              <!-- Swiper 4 -->
+              <div class="apartments swiper-slide">
+                <p>
+                  Modalidade: Apartamento <br />
+                  Bairro: Cabula
+                </p>
+                <br />
+                <img src="./assets/photos/brick-blue-ap.jpg" alt="" />
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
 
       <div class="divider-1"></div>
 
-      <section class="section" id="contact"></section>
+      <!-- Services -->
+      <section class="section" id="service">
+        <div class="container grid">
+          <header>
+            <h2 class="title">Serviços</h2>
+            <p class="subtitle">
+              A partir de agora você não precisa mais solicitar profissionais de
+              vários lugares para cada tipo de serviço. Aqui na F4Life contamos
+              com uma grande quantidade de profissionais qualificados nas mais
+              diversas áreas de atuação. Tudo para proporcionar o melhor
+              ambiente universitário para você.
+            </p>
+          </header>
+          <div class="cards grid">
+            <div class="card">
+              <i class="icon-tools1"></i>
+              <h3 class="title">Manutenções e reparos</h3>
+              <p>
+                Manuteções em geral, montagem de móveis, limpeza de aparelhos de
+                ar condicionado e muito mais
+              </p>
+            </div>
+            <div class="card">
+              <i class="icon-wifi"></i>
+              <h3 class="title">Internet</h3>
+              <p>Instalação e manutenção em redes locais de internet</p>
+            </div>
+            <div class="card">
+              <i class="icon-electrical_services"></i>
+              <h3 class="title">Serviços elétricos</h3>
+              <p>Todos os tipos de serviços elétricos</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <div class="divider-2"></div>
 
-      <footer class="section"></footer>
+      <!-- Testimonials -->
+      <section class="section" id="testimonials">
+        <div class="container">
+          <header>
+            <h2 class="title">
+              Depoimentos de quem já utilizou nossos serviços
+            </h2>
+          </header>
+          <div class="testimonials swiper">
+            <div class="swiper-wrapper">
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span>
+                    "Há alguns anos venho alugando com a F4Life e sou testemunha
+                    do profissionalismo e dedicação da empresa!"
+                  </p>
+                  <cite>
+                    <img src="assets/photos/user1.jpg" alt="Usuario 1" />
+                    Wanessa Souza
+                  </cite>
+                </blockquote>
+              </div>
+
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span>
+                    "Empresa que demonstrou a qualidade que eu estava
+                    procurando. O mais apreciável é a atenção e rápida resposta
+                    da equipe."
+                  </p>
+                  <cite>
+                    <img src="assets/photos/user2.jpg" alt="Usuario 2" />
+                    Kingston Moreira
+                  </cite>
+                </blockquote>
+              </div>
+
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span>
+                    "Atendimento rápido, personalizado e excelente qualidade no
+                    serviço prestado. Recomendo!"
+                  </p>
+                  <cite>
+                    <img src="assets/photos/user3.jpg" alt="Usuario 3" />
+                    Robério Vivaldo
+                  </cite>
+                </blockquote>
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-1"></div>
+
+      <!-- Contact -->
+      <section class="section" id="contact">
+        <header>
+          <h2 class="title">Fale conosco</h2>
+        </header>
+        <div class="container grid">
+          <div class="container">
+            <form action="">
+              <label for="fname">Primeiro nome</label>
+              <input type="text" id="fname" name="firstname" />
+
+              <label for="lname">Último nome</label>
+              <input type="text" id="lname" name="lastname" />
+
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" />
+
+              <label for="student">Estudante?</label>
+              <select id="student" name="student">
+                <option value="yes">Sim</option>
+                <option value="no">Não</option>
+              </select>
+
+              <label for="subject">Assunto</label>
+              <textarea id="subject" name="subject"></textarea>
+
+              <input type="submit" onclick="validateForm()" value="Enviar" />
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-2"></div>
     </main>
+
+    <!-- Footer -->
+    <footer class="section">
+      <div class="container grid">
+        <div class="brand">
+          <a class="logo" href="#"
+            ><img src="./assets/photos/logo.png" alt="Logomarca da empresa"
+          /></a>
+          <p>©2022 F4Life</p>
+          <p>Todos os direitos reservados.</p>
+        </div>
+
+        <div class="social grid">
+          <a href="https://www.twitter.com/" target="_blank"
+            ><i class="icon-twitter"></i
+          ></a>
+          <a href="https://www.facebook.com/" target="_blank"
+            ><i class="icon-facebook"></i
+          ></a>
+          <a href="https://www.instagram.com/" target="_blank"
+            ><i class="icon-instagram"></i
+          ></a>
+          <a href="https://www.linkedin.com/" target="_blank"
+            ><i class="icon-linkedin"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <a href="#home" class="back-to-top"><i class="icon-arrow-up"></i></a>
+
+    <!-- Swiper -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <!-- ScrollReveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- MainJs -->
+    <script src="main.js"></script>
   </body>
 </html>
