@@ -503,6 +503,15 @@ textarea {
   resize: vertical;
 }
 
+form p {
+  display: none;
+  font-size: 1.5rem;
+  border: 1px solid;
+  border-radius: 0.25rem;
+  background-color: transparent;
+  padding: 0.5rem;
+}
+
 #subject {
   height: 200px;
 }
@@ -515,6 +524,7 @@ input[type="submit"] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  margin-bottom: 16px;
 }
 
 input[type="submit"]:hover {

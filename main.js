@@ -119,6 +119,7 @@ function validateForm() {
   let userPattern = /^(?=.*[.])(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{1,32}$/;
   let userVerified = userPattern.test(user);
 
+  /* Domain validation */
   let domain = email.substring(
     email.lastIndexOf("@") + 1,
     email.lastIndexOf(".")
@@ -127,10 +128,24 @@ function validateForm() {
   let domainVerified = domainPattern.test(domain);
 
   if (userVerified && domainVerified && subject !== "") {
-    alert(`Obrigado pelo contato, ${user}!`);
+    document.getElementById("message").style.display = "block";
+    document.getElementById(
+      "message"
+    ).textContent = `Obrigado pelo contato, ${user}!`;
+    document.getElementById("message").style.backgroundColor = "#93ff8a";
   } else if (subject == "" && userVerified && domainVerified) {
-    alert("Erro no envio: Insira uma mensagem");
+    document.getElementById("message").style.display = "block";
+    document.getElementById("message").textContent =
+      "Erro no envio: Insira uma mensagem";
+    document.getElementById("message").style.backgroundColor = "#ffa1a1";
   } else {
-    alert("Erro no envio: Endereço de email inválido");
+    document.getElementById("message").style.display = "block";
+    document.getElementById("message").textContent =
+      "Erro no envio: Endereço de email inválido";
+    document.getElementById("message").style.backgroundColor = "#ffa1a1";
   }
+}
+
+function preventRefresh(e) {
+  event.preventDefault();
 }

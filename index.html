@@ -276,7 +276,7 @@
         </header>
         <div class="container grid">
           <div class="container">
-            <form action="">
+            <form onsubmit="preventRefresh()">
               <label for="fname">Primeiro nome</label>
               <input type="text" id="fname" name="firstname" required />
 
@@ -296,6 +296,8 @@
               <textarea id="subject" name="subject"></textarea>
 
               <input type="submit" onclick="validateForm()" value="Enviar" />
+
+              <p class="formOutput" id="message"></p>
             </form>
           </div>
         </div>
